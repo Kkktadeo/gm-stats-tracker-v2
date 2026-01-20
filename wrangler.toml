@@ -1,0 +1,16 @@
+name = "gm-stats-tracker-v2"
+main = "build/index.js"
+compatibility_date = "2026-01-18"
+preview_urls = false
+
+[observability]
+[observability.logs]
+enabled = true
+invocation_logs = true
+
+[build]
+command = "cargo install -q worker-build@^0.7 && worker-build --release"
+
+[[kv_namespaces]]
+binding="cached_images"
+id = "917a2b629699418da83adc682b3d0f12"

@@ -1,0 +1,17 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="bg">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+            <feComponentTransfer>
+                <feFuncR type="linear" slope="0.3" />
+                <feFuncG type="linear" slope="0.3" />
+                <feFuncB type="linear" slope="0.3" />
+            </feComponentTransfer>
+        </filter>
+    </defs>
+
+    <image x="-10" y="-10" width="620" height="420" preserveAspectRatio="xMidYMid slice" filter="url(#bg)" href="{screenshot}" />
+    <text x="300" y="40" font-family="Roboto Condensed" font-size="25" fill="white" text-anchor="middle">{title}</text>
+    <text x="300" y="200" font-family="Roboto Condensed" font-size="40" fill="white" text-anchor="middle">{count}</text>
+    <text x="300" y="380" font-family="Roboto Condensed" font-size="15" fill="grey" text-anchor="middle">(by jakeayy, still WIP)</text>
+</svg>

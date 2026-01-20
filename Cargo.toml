@@ -1,0 +1,23 @@
+[package]
+name = "gm-stats-tracker-v2"
+version = "0.1.0"
+edition = "2021"
+authors = ["jakeayy <contact@jakeayy.xyz>"]
+license-file = "LICENSE"
+
+[profile.release]
+lto = true
+strip = true
+codegen-units = 1
+opt-level = "z"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+base64 = "0.22.1"
+image-webp = "0.2.4"
+resvg = { version = "0.46.0", default-features = false, features = ["text", "raster-images"] }
+serde = "1.0.228"
+worker = { version = "0.7" }
+worker-macros = { version = "0.7" }
