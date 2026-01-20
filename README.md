@@ -37,7 +37,7 @@ Currently the public instance that can be used by others is `https://gm-stats-tr
 
 2. [`npm`](https://nodejs.org/) with it's `npx` (although I recommend [`bun`](https://bun.sh) and it's `bunx`), if you'll use `npx`, replace `bunx` with it in next commands.
 
-3. `wasm32-unknown-unknown` WASM toolchain to be able to comile the worker at all.
+3. `wasm32-unknown-unknown` WASM toolchain to be able to compile the worker at all.
     ```sh
     rustup target add wasm32-unknown-unknown
     ```
